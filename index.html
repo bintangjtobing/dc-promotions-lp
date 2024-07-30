@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0062)# -->
 <html lang="en" data-bs-theme="light" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
 
 <head>
@@ -883,6 +882,24 @@
     });
   </script>
   <script>
+    function generateToken() {
+      return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+    }
+
+    // Get all link elements
+    const links = document.querySelectorAll('link[href$=".css"]');
+
+    // Get all script elements
+    const scripts = document.querySelectorAll('script[src$=".js"]');
+
+    // Add token to href and src attributes
+    const token = generateToken();
+    links.forEach(link => {
+      link.href += `?v=${token}`;
+    });
+    scripts.forEach(script => {
+      script.src += `?v=${token}`;
+    });
     document.addEventListener("DOMContentLoaded", function () {
       fetch('countries.json')
         .then(response => response.json())
