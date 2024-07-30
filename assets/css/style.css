@@ -511,9 +511,9 @@ ol {
   --title-color-style2:#0C263A;
   --text-color:#6B777F;
   --text-color-light: #6B6F7F;
-  --text-color-2: rgba(255, 255, 255, 0.6);
-  --text-color-3: rgba(255, 255, 255, 0.70);
-  --text-color-4: #B0B3BF;
+  --text-color-2: rgba(69, 69, 69, 0.6);
+  --text-color-3: rgba(46, 46, 46, 0.7);
+  --text-color-4: #2a2a2a;
   --bg-color: #EDF2F8;
   --bg-color-trans: rgba(237, 242, 248, 0.22);
   --bg-grad-color: #FFF;
@@ -557,7 +557,7 @@ ol {
   --bg-shape-color-trans: rgba(255, 255, 255, 0.22);
   --bg-shape-color-2: #D5E5F9;
   --bg-shape-color-trans-2: rgba(255, 255, 255, 0.22);
-  --footer-bg-color: #000615;
+  --footer-bg-color: #ffffff;
   --faq-img-bg-shadow: #b8d6ff;
   --pagination-bg-color: #b8d6ff;
   --section-bg-color: #f8f8f8;
@@ -659,7 +659,7 @@ ol {
   --bg-shape-color-trans: rgba(255, 255, 255, 0.02);
   --bg-shape-color-2: rgba(213, 229, 249, 0.16);
   --bg-shape-color-trans-2: rgba(255, 255, 255, 0.04);
-  --footer-bg-color: #00150F;
+  --footer-bg-color: #ffffff;
   --faq-img-bg-shadow: #16d4668f;
   --pagination-bg-color: #00150F;
   --section-bg-color: rgba(237, 242, 248, 0.02);
