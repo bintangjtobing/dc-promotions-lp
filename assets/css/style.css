@@ -11159,4 +11159,6 @@ html[data-bs-theme=dark] .partner--gradient::after {
   background: #003E2C;
 }
 
-/*# sourceMappingURL=style.css.map */
+.trk-btn--primary {
+  border-radius: 100px;
+}
