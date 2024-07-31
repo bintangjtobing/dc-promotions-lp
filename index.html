@@ -100,12 +100,14 @@
       fetch('https://my.duhanicapital.com/gateway/api/5/syntellicore.cfc?method=user_login', {
           method: 'POST',
           headers: {
-            'Authorization': 'Bearer 5C9F6D90-5A83-4ECA-8741-8E09627AE5F2'
+            'Authorization': 'Bearer 5C9F6D90-5A83-4ECA-8741-8E09627AE5F2',
           },
           body: formData
         })
         .then(response => response.json())
+      console.log(response)
         .then(data => {
+          console.log(data)
           if (data.success) {
             showAlert('Form submitted successfully!', 'success');
             setTimeout(() => {
@@ -258,8 +260,8 @@
                       <label for="currency">Currency</label>
                       <select class="form-control" name="currency" id="currency" data-is_required="true"
                         data-error_missing="Currency is a required field">
-                        <option value="" disabled selected>Select your currency</option>
-                        <option value="USD">USD</option>
+                        <option value="" disabled>Select your currency</option>
+                        <option value="USD" selected>USD</option>
                         <option value="INR">INR</option>
                         <option value="THB">THB</option>
                         <option value="IDR">IDR</option>
@@ -323,45 +325,6 @@
   </div>
   <!-- ===============>> Contact section start here <<================= -->
   <!-- ===============>> Banner section start here <<================= -->
-  <!-- <section class="banner banner--style1" style="padding-bottom:10px;">
-    <div class="banner__bg">
-      <div class="banner__bg-element">
-        <span class="bg-color d-lg-none"></span>
-      </div>
-    </div>
-    <div class="container">
-      <div class="banner__wrapper">
-        <div class="row gy-3 gx-4">
-          <div class="col-lg-6 col-md-7">
-            <div class="banner__content aos-init aos-animate" data-aos-duration="1000">
-              <h1 class="banner__content-heading">Unlock <span>30%</span> More Trading Power!</h1>
-              <h3 class="banner__content-heading">Empower Your Trading Journey with Duhani Capital</h3>
-              <p class="banner__content-moto">Kickstart your trading journey with Duhani Capital. Enjoy a 30% tradable
-                bonus on every deposit, empowering you to take control of your financial future.
-              </p>
-              <div class="banner__btn-group btn-group" style="padding-bottom: 0;">
-                <a href="https://my.duhanicapital.com/live_signup" class="trk-btn trk-btn--primary trk-btn--arrow">Join
-                  Now
-                  <span><svg class="svg-inline--fa fa-arrow-right" aria-hidden="true" focusable="false"
-                      data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 448 512" data-fa-i2svg="">
-                      <path fill="currentColor"
-                        d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z">
-                      </path>
-                    </svg></span> </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-5">
-            <div class="banner__thumb aos-init aos-animate" data-aos-duration="1000">
-              <img src="assets/img/30percent.png" style="width: 500px;" alt="banner-thumb" class="dark">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- ===============>> Banner section end here <<================= -->
   <!-- ===============>> About section start here <<================= -->
   <section class="about padding-top--style2 pt-1 padding-bottom bg-color-3" style="padding-bottom:10px;">
     <div class="container">
@@ -644,7 +607,7 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script>
     function generatePassword(length = 10) {
-      const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+[]{}|;:',.<>?/";
+      const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?";
       let password = "";
       for (let i = 0; i < length; i++) {
         const randomIndex = Math.floor(Math.random() * charset.length);
