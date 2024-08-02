@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+<html lang="" data-bs-theme="light" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
 
 <head>
   <meta charset="UTF-8">
@@ -42,6 +42,7 @@
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
+        console.log(data);
         const data = await response.json();
         document.documentElement.lang = data.country.toLowerCase();
       } catch (error) {
@@ -226,16 +227,6 @@
                       <span class="help-block"></span>
                     </div>
                   </div>
-                  <div class="col-12">
-                    <div class="form-group">
-                      <label for="country_id">Country</label>
-                      <select class="form-control" name="country_id" id="country_id" data-is_required="true"
-                        data-error_missing="Country is a required field">
-                        <option value="" disabled selected>Select your country</option>
-                      </select>
-                      <span class="help-block"></span>
-                    </div>
-                  </div>
                   <div class="col-md-4">
                     <div class="form-group">
                       <label for="tel_country_code" class="control-label">Country Code</label>
@@ -252,23 +243,6 @@
                         placeholder="Enter your telephone number" data-is_required="true"
                         data-error_missing="Telephone is a required field"
                         data-error_invalid="Invalid Telephone number">
-                      <span class="help-block"></span>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-group">
-                      <label for="currency">Currency</label>
-                      <select class="form-control" name="currency" id="currency" data-is_required="true"
-                        data-error_missing="Currency is a required field">
-                        <option value="" disabled>Select your currency</option>
-                        <option value="USD" selected>USD</option>
-                        <option value="INR">INR</option>
-                        <option value="THB">THB</option>
-                        <option value="IDR">IDR</option>
-                        <option value="VND">VND</option>
-                        <option value="CNY">CNY</option>
-                        <option value="PHP">PHP</option>
-                      </select>
                       <span class="help-block"></span>
                     </div>
                   </div>
@@ -305,6 +279,7 @@
                     <input type="hidden" name="introducer" id="introducer" value="">
                     <input type="hidden" name="password" id="password" value="">
                     <input type="hidden" name="password2" id="password2" value="">
+                    <input type="hidden" name="currency" id="currency" value="USD">
                     <input type="hidden" name="sidi" id="sidi" value="">
                     <input type="hidden" name="sidc" id="sidc" value="">
                     <input type="hidden" name="httpref" id="httpref" value="">
