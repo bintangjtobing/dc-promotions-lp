@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="assets/css/all.min.css">
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://my.duhanicapital.com/gateway/formfusion/1/syntellicore.js"></script>
 </head>
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" data-new-gr-c-s-check-loaded="14.1189.0"
@@ -98,7 +99,7 @@
       event.preventDefault();
 
       const formData = new FormData(event.target);
-      fetch('https://my.duhanicapital.com/gateway/api/5/syntellicore.cfc?method=user_login', {
+      fetch('https://bo.duhanicapital.com/gateway/api/1/syntellicore.cfc?method=create_lead', {
           method: 'POST',
           headers: {
             'Authorization': 'Bearer 5C9F6D90-5A83-4ECA-8741-8E09627AE5F2',
@@ -184,7 +185,7 @@
           </div>
           <div class="col-md-7">
             <div class="contact__form">
-              <form action="/" data-aos-duration="1000" class="aos-init aos-animate" role="form"
+              <form action="#" method="POST" data-aos-duration="1000" class="aos-init aos-animate" role="form"
                 data-form="syntellicore" onsubmit="handleSubmit(event)">
                 <div class="row g-4">
                   <div class="col-12">
@@ -272,20 +273,30 @@
                     <input type="hidden" name="gateway" id="gateway" value="https://my.duhanicapital.com">
                     <input type="hidden" name="api_key" id="api_key" value="5C9F6D90-5A83-4ECA-8741-8E09627AE5F2">
                     <input type="hidden" name="on_submit" id="on_submit" value="AUTO_LOGIN">
+                    <input type="hidden" name="verify" id="verify" value="0">
+                    <input type="hidden" name="account" id="account" value="1">
+                    <input type="hidden" name="create_company" id="create_company" value="0">
+                    <input type="hidden" name="company" id="company" value="">
+                    <input type="hidden" name="currency" id="currency" value="USD">
+                    <input type="hidden" name="password" id="password" value="">
+                    <input type="hidden" name="password2" id="password2" value="">
+                    <input type="hidden" name="is_ib" id="is_ib" value="0">
                     <input type="hidden" name="label" id="label" value="">
                     <input type="hidden" name="tag" id="tag" value="">
                     <input type="hidden" name="language" id="language" value="">
-                    <input type="hidden" name="is_ib" id="is_ib" value="0">
                     <input type="hidden" name="introducer" id="introducer" value="">
-                    <input type="hidden" name="password" id="password" value="">
-                    <input type="hidden" name="password2" id="password2" value="">
-                    <input type="hidden" name="currency" id="currency" value="USD">
                     <input type="hidden" name="sidi" id="sidi" value="">
                     <input type="hidden" name="sidc" id="sidc" value="">
                     <input type="hidden" name="httpref" id="httpref" value="">
                     <input type="hidden" name="auto_responder" id="auto_responder" value="">
                     <input type="hidden" name="lead_method" id="lead_method" value="">
-                    <input type="hidden" name="verify" id="verify" value="0">
+                    <input type="hidden" name="emailInstantNotification" id="emailInstantNotification"
+                      value="PROFILECREATED">
+                    <input type="hidden" name="lead_method" id="lead_method" value="SIGNUP">
+                    <input type="hidden" name="targetval" id="targetval" value="_self">
+                    <input type="hidden" name="tc_confirmed" id="tc_confirmed" value="1">
+                    <input type="hidden" name="best_interest" id="best_interest" value="1">
+                    <input type="hidden" name="client_agreement" id="client_agreement" value="1">
                   </div>
                 </div>
               </form>
